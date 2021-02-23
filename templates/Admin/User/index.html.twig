@@ -1,0 +1,13 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block body %}
+        <h1>{{title}}</h1>
+
+        <h2>User list: </h2>
+        <ul>
+            {% for user in users %}
+                    <li> {{user.email}} | {{user.roles | json_encode}} </li>
+            {% endfor %}
+        </ul>
+    
+{% endblock %}
