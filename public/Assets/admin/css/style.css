@@ -1,0 +1,11 @@
+#user_sigin_form {
+    width:250px;
+    
+}
+.form_register_s {
+    width:350px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 7px 7px  rgba(27, 25, 25, 0.904);
+    background-color: #282828; 
+}

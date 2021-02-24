@@ -8,6 +8,7 @@
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
             <link rel='stylesheet' href="{{ asset('Assets/framework/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('Assets/admin/css/style.css')}}">
         {% endblock %}
 
         
@@ -15,7 +16,7 @@
     <body>
        
         <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-  <a class="navbar-brand mx-3" href="#">Navbar</a>
+  <a class="navbar-brand mx-3" href="{{ path('homePage')}}">Admin Kobka</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,7 +43,7 @@
     <form class="form-inline my-2 my-lg-0 " style="margin-left: auto; margin-right: 20px;">
          
            
-            <a href="{{ path('app_logout') }}"class="btn btn-outline-success my-2 my-sm-0" type="submit">Exit</a>
+            <a href="{{ path('app_logout') }}"class="btn btn-outline-info my-2 my-sm-0" type="submit">Exit</a>
         
     </form>
   </div>

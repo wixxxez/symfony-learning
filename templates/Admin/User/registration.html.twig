@@ -1,8 +1,16 @@
 {% extends "admin/adminbase.html.twig" %}
 {% block body %}
 
-<h1>{{title}}</h1>
 
-{{ form(form) }}
+<div class="container-fluid text-center mt-5 d-flex justify-content-center">
+    <div class="form_register_s text-center border">
+        <h1>{{title}}</h1>
+        <div class="d-flex justify-content-center">
+            {{ form(form) }}
+        </div>
+        
+    </div>
 
+
+</div>
 {% endblock %}
