@@ -10,8 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Publication
 {
-    private const PUBLISHED = 1;
-    private const DRAFT =0;
+    public const PUBLISHED = 1;
+    public const DRAFT =0;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -48,6 +48,12 @@ class Publication
      * @ORM\Column(type="datetime")
      */
     private $update_at;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
 
     public function getId(): ?int
     {
@@ -109,8 +115,11 @@ class Publication
         return $this->is_Published;
     }
 
-    public function setIsPublished(){
-        $this->is_Published = self::PUBLISHED;
+    public function setIsPublished(bool $is_published): self
+    {
+        $this->is_Published = $is_published;
+
+        return $this;
     }
     public function setIsDraft(){
         $this->is_Published = self::DRAFT;
@@ -127,6 +136,18 @@ class Publication
     public function setUpdateAt(\DateTimeInterface $update_at): self
     {
         $this->update_at = $update_at;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

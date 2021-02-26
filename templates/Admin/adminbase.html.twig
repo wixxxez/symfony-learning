@@ -34,9 +34,21 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{ path('register')}}">Create User</a>
           <a class="dropdown-item" href="{{ path('adminUserList')}}">Check user list</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          
         </div>
+        
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Post's
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownC">
+          <a class="dropdown-item" href="{{ path('PublicationCreate')}}">Create Post</a>
+          <a class="dropdown-item" href="{{ path('Publication')}}">Check all post</a>
+          <a class="dropdown-item" href="{{ path('CategoryCreate')}}">Create category</a>
+          <a class="dropdown-item" href="{{ path('Category')}}">Check all category</a>
+        </div>
+        
       </li>
      
     </ul>
