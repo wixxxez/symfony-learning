@@ -42,7 +42,7 @@ class AdminCategoryController extends AdminBaseController {
             $em->persist($category);
             $em->flush();
             $this->addFlash('success',"Category added! ");
-            return $this->redirectToRoute('Publication');
+            return $this->redirectToRoute('Category');
         }
         
         
