@@ -6,6 +6,9 @@
                 <div class="row no-gutters">
                        <div class="col-12 text-center">
                        <h1 >{{title}}</h1>
+                        <a href="{{
+                                path('CategoryCreate')
+                        }}" class="btn btn-outline-success">Create Category</a> 
                         {% for messege in app.flashes('success') %}
                         <div class="container">
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -23,7 +26,9 @@
                          <h2>Category list: </h2>
                                 <ul>
                         {% for cat in category %}
-                                <li> {{cat.title}} | {{cat.text}} </li>
+                                <li> {{cat.title}} | {{cat.text}} </li> <a href="{{
+                                        path('CategoryUpdate',{'id': cat.id })
+                                }}">Update</a>
                         {% endfor %}
                         </ul>
                         </div>

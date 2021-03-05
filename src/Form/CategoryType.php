@@ -27,7 +27,16 @@ class CategoryType extends AbstractType
                 'label'=>'Add some description if you want: '
             ))
             ->add('save', SubmitType::class,array(
-                'label'=> 'Add'
+                'label'=> 'Add',
+                'attr'=> [
+                    'class'=>'btn btn-success'
+                ]
+            ))
+            ->add('delete', SubmitType::class, array(
+                'label' =>'Remove',
+                'attr' => [
+                    'class'=>'btn btn-danger'
+                ]
             ))
           
         ;

@@ -6,9 +6,18 @@
                 <div class="row no-gutters">
                        <div class="col-12 text-center">
                        <h1 >{{title}}</h1>
-
+                       {% if catList is empty %}
+                        <h1>For beginner you need to create a category</h1>
+                        <a href="{{ path('CategoryCreate') }}" class="btn btn-success">Click here ! </a>
+                        {% else %}
+                        <a href="{{
+                                path('PublicationCreate')
+                        }}" class="btn btn-outline-success">Create Post</a> 
+                        {% endif %}
                        {% for messege in app.flashes('success') %}
                         <div class="container">
+
+                                
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <strong>{{ messege }}</strong> 
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -26,7 +35,7 @@
                          <h2>Pubications list: </h2>
                                 <ul>
                         {% for post in posts %}
-                                <li> {{post.title}} | {{post.content}} </li>
+                                <li> {{post.title}} | {{post.content}} </li><a href="{{ path("PublicationUpdate",{'id' : post.id }) }}"> Update </a>
                         {% endfor %}
                         </ul>
                         </div>
