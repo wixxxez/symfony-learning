@@ -7,7 +7,7 @@ use App\Form\PublicationType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-
+// comentra
 class AdminPostController extends AdminBaseController {
     /**
      * @Route("admin/publication/",name="Publication")
